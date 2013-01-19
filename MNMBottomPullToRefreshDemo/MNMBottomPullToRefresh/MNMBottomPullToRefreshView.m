@@ -99,7 +99,7 @@
     if (self = [super initWithFrame:frame]) {
         
         [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
-        [self setBackgroundColor:[UIColor colorWithWhite:0.75f alpha:1.0f]];
+        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:1.0f]];
         
         containerView_ = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(frame), CGRectGetHeight(frame))];
         
@@ -129,7 +129,7 @@
         
         messageLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconImageView_.frame) + gap, topMargin, CGRectGetWidth(frame) - CGRectGetMaxX([iconImageView_ frame]) - gap * 2.0f, CGRectGetHeight(frame) - topMargin * 2.0f)];
         [messageLabel_ setBackgroundColor:[UIColor clearColor]];
-        [messageLabel_ setTextColor:[UIColor whiteColor]];
+        [messageLabel_ setTextColor:[UIColor darkGrayColor]];
         [messageLabel_ setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
         
         [containerView_ addSubview:messageLabel_];
