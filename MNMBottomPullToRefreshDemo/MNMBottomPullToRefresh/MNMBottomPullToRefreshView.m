@@ -31,9 +31,9 @@
 /*
  * Texts to show in different states
  */
-#define MNM_BOTTOM_PTR_PULL_TEXT_KEY                                    NSLocalizedStringFromTable(@"MNM_BOTTOM_PTR_PULL_TEXT", MNM_BOTTOM_PTR_LOCALIZED_STRINGS_TABLE, nil)
-#define MNM_BOTTOM_PTR_RELEASE_TEXT_KEY                                 NSLocalizedStringFromTable(@"MNM_BOTTOM_PTR_RELEASE_TEXT", MNM_BOTTOM_PTR_LOCALIZED_STRINGS_TABLE, nil)
-#define MNM_BOTTOM_PTR_LOADING_TEXT_KEY                                 NSLocalizedStringFromTable(@"MNM_BOTTOM_PTR_LOADING_TEXT", MNM_BOTTOM_PTR_LOCALIZED_STRINGS_TABLE, nil)
+#define MNM_BOTTOM_PTR_PULL_TEXT_KEY                                    NSLocalizedString(@"MNM_BOTTOM_PTR_PULL_TEXT", nil)
+#define MNM_BOTTOM_PTR_RELEASE_TEXT_KEY                                 NSLocalizedString(@"MNM_BOTTOM_PTR_RELEASE_TEXT", nil)
+#define MNM_BOTTOM_PTR_LOADING_TEXT_KEY                                 NSLocalizedString(@"MNM_BOTTOM_PTR_LOADING_TEXT", nil)
 
 /*
  * Defines icon image
