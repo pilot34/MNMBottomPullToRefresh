@@ -117,7 +117,7 @@
         
         [containerView_ addSubview:iconImageView_];
         
-        loadingActivityIndicator_ = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        loadingActivityIndicator_ = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [loadingActivityIndicator_ setCenter:[iconImageView_ center]];
         [loadingActivityIndicator_ setHidesWhenStopped:YES];
         [loadingActivityIndicator_ setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
