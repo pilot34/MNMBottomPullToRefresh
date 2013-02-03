@@ -31,9 +31,9 @@
 /*
  * Texts to show in different states
  */
-#define MNM_BOTTOM_PTR_PULL_TEXT_KEY                                    NSLocalizedString(@"MNM_BOTTOM_PTR_PULL_TEXT", nil)
-#define MNM_BOTTOM_PTR_RELEASE_TEXT_KEY                                 NSLocalizedString(@"MNM_BOTTOM_PTR_RELEASE_TEXT", nil)
-#define MNM_BOTTOM_PTR_LOADING_TEXT_KEY                                 NSLocalizedString(@"MNM_BOTTOM_PTR_LOADING_TEXT", nil)
+#define MNM_BOTTOM_PTR_PULL_TEXT_KEY                                    NSLocalizedStringFromTable(@"MNM_BOTTOM_PTR_PULL_TEXT", MNM_BOTTOM_PTR_LOCALIZED_STRINGS_TABLE, nil)
+#define MNM_BOTTOM_PTR_RELEASE_TEXT_KEY                                 NSLocalizedStringFromTable(@"MNM_BOTTOM_PTR_RELEASE_TEXT", MNM_BOTTOM_PTR_LOCALIZED_STRINGS_TABLE, nil)
+#define MNM_BOTTOM_PTR_LOADING_TEXT_KEY                                 NSLocalizedStringFromTable(@"MNM_BOTTOM_PTR_LOADING_TEXT", MNM_BOTTOM_PTR_LOCALIZED_STRINGS_TABLE, nil)
 
 /*
  * Defines icon image
@@ -99,7 +99,7 @@
     if (self = [super initWithFrame:frame]) {
         
         [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
-        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:1.0f]];
+        [self setBackgroundColor:UIColor.clearColor];
         
         containerView_ = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(frame), CGRectGetHeight(frame))];
         
@@ -129,7 +129,7 @@
         
         messageLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconImageView_.frame) + gap, topMargin, CGRectGetWidth(frame) - CGRectGetMaxX([iconImageView_ frame]) - gap * 2.0f, CGRectGetHeight(frame) - topMargin * 2.0f)];
         [messageLabel_ setBackgroundColor:[UIColor clearColor]];
-        [messageLabel_ setTextColor:[UIColor colorWithRed:0.51 green:0.56 blue:0.61 alpha:1]];
+        [messageLabel_ setTextColor:[UIColor colorWithRed:0.56 green:0.61 blue:0.68 alpha:1]];
         [messageLabel_ setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
         
         [containerView_ addSubview:messageLabel_];
