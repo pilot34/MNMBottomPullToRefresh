@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                     MNMBottomPullToRefresh is a solution to add pull-to-refresh feature to the bottom of an UITableView instead of the top, as usual.
                    DESC
-  s.homepage     = "https://github.com/pilot34/bottom-pull-to-refresh"
+  s.homepage     = "https://github.com/pilot34/MNMBottomPullToRefresh.git"
   s.platform     = :ios, '5.0'
   s.author       = 'Mario Negro'
   s.license = { :type => 'MIT', :text => <<-LICENSE
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   LICENSE
   }
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/pilot34/bottom-pull-to-refresh.git" }
+  s.source       = { :git => "https://github.com/pilot34/MNMBottomPullToRefresh.git" }
   s.source_files = 'MNMBottomPullToRefreshDemo/MNMBottomPullToRefresh/*.{h,m}'
   s.resources    = 'MNMBottomPullToRefreshDemo/MNMBottomPullToRefresh/*.{png,strings}'
 end
