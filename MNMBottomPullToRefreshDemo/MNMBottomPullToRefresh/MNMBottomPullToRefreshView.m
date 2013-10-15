@@ -190,8 +190,7 @@
             
             if (rotateIconWhileBecomingVisible_) {
             
-                CGFloat angle = (-offset * M_PI) / CGRectGetHeight([self frame]);
-                
+                CGFloat angle = (-offset * M_PI) / self.fixedHeight;                
                 [iconImageView_ setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, angle)];
                 
             } else {

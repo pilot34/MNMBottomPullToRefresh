@@ -96,7 +96,7 @@ CGFloat const kAnimationDuration = 0.2f;
         offset = ([table_ contentSize].height - [table_ contentOffset].y) - CGRectGetHeight([table_ frame]);
     }
     
-    return offset;
+    return offset + self.contentInset.bottom;
 }
 
 /*
@@ -120,6 +120,8 @@ CGFloat const kAnimationDuration = 0.2f;
     [pullToRefreshView_ setFrame:frame];
     
     [table_ addSubview:pullToRefreshView_];
+    
+    self.table.contentInset = self.contentInset;
 }
 
 /*
@@ -146,7 +148,7 @@ CGFloat const kAnimationDuration = 0.2f;
             
             [pullToRefreshView_ changeStateOfControl:MNMBottomPullToRefreshViewStateIdle offset:offset];
             
-        } else if (offset <= 0.0f && offset >= -[pullToRefreshView_ fixedHeight] + self.contentInset.bottom) {
+        } else if (offset <= 0.0f && offset >= -[pullToRefreshView_ fixedHeight]) {
                 
             [pullToRefreshView_ changeStateOfControl:MNMBottomPullToRefreshViewStatePull offset:offset];
             
