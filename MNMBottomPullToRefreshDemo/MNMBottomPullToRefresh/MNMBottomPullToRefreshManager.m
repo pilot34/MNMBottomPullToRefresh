@@ -146,7 +146,7 @@ CGFloat const kAnimationDuration = 0.2f;
             
             [pullToRefreshView_ changeStateOfControl:MNMBottomPullToRefreshViewStateIdle offset:offset];
             
-        } else if (offset <= 0.0f && offset >= -[pullToRefreshView_ fixedHeight]) {
+        } else if (offset <= 0.0f && offset >= -[pullToRefreshView_ fixedHeight] + self.contentInset.bottom) {
                 
             [pullToRefreshView_ changeStateOfControl:MNMBottomPullToRefreshViewStatePull offset:offset];
             
