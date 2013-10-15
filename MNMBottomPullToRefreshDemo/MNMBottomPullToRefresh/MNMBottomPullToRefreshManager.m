@@ -103,7 +103,7 @@ CGFloat const kAnimationDuration = 0.2f;
  * Relocate pull-to-refresh view
  */
 - (void)relocatePullToRefreshView {
-    
+        
     CGFloat yOrigin = 0.0f;
     
     if ([table_ contentSize].height >= CGRectGetHeight([table_ frame])) {
@@ -177,11 +177,13 @@ CGFloat const kAnimationDuration = 0.2f;
                 
                 if ([table_ contentSize].height >= CGRectGetHeight([table_ frame])) {
                 
-                    [table_ setContentInset:UIEdgeInsetsMake(0.0f, 0.0f, -height, 0.0f)];
+                    UIEdgeInsets insets = self.contentInset;
+                    insets.bottom -= height;
+                    [table_ setContentInset:insets];
                     
                 } else {
                     
-                    [table_ setContentInset:UIEdgeInsetsMake(height, 0.0f, 0.0f, 0.0f)];
+                    [table_ setContentInset:self.contentInset];
                 }
             }];
         }
@@ -193,7 +195,7 @@ CGFloat const kAnimationDuration = 0.2f;
  */
 - (void)tableViewReloadFinished {
     
-    [table_ setContentInset:UIEdgeInsetsZero];
+    [table_ setContentInset:self.contentInset];
 
     [self relocatePullToRefreshView];
 

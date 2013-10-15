@@ -106,4 +106,6 @@
  */
 - (void)tableViewReloadFinished;
 
+@property (nonatomic) UIEdgeInsets contentInset;
+
 @end
